@@ -1,0 +1,257 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  background-color: #fdf1ff;
+  font-family: "Baloo 2", cursive;
+}
+nav {
+  background-color: #5e548e;
+  background-image: url(../img/back-nav.png);
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.menu {
+  display: none;
+}
+.search {
+  background-color: #fadfff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Baloo 2", cursive;
+  color: #231942;
+  flex-wrap: nowrap;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+}
+.arrow {
+  align-self: center;
+  padding-right: 5%;
+  padding-top: 3%;
+}
+.par {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.imput {
+  background-color: #fdf1ff;
+  border-radius: 6.25rem;
+  height: 5vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  border: 1px solid #e9e4f7;
+  box-shadow: 1px 4px 5px #7b7b7b78;
+}
+
+button {
+  width: 40%;
+  height: 7vh;
+  background-color: #ba71d4;
+  color: #fdf1ff;
+  border-radius: 2rem;
+  border: none;
+  margin: 5% 0;
+}
+button:hover {
+  background-color: #231942;
+}
+.section-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  margin: 5%;
+}
+
+.number {
+  list-style: none;
+  display: flex;
+}
+.number li {
+  border: #be95c427 1px solid;
+  width: 5vw;
+  text-align: center;
+  padding: 4% 0% 0% 0%;
+}
+li:hover {
+  background-color: #ba71d4;
+  border-radius: 1rem;
+  width: 5vw;
+}
+
+footer {
+  background-color: #231942;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fdf1ff;
+  text-align: center;
+}
+
+/* cards */
+.m-item,
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  border-bottom: #ba71d4 1px solid;
+}
+
+.img-1 {
+  width: 80%;
+  border-radius: 2rem;
+  margin: 5% 10%;
+}
+.product {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.item {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .hamburguer {
+    display: none;
+  }
+  .m-item {
+    display: none;
+  }
+
+  .body {
+    display: grid;
+    grid-template-areas:
+      "nav nav"
+      "search product"
+      "search pagination"
+      "footer footer";
+  }
+
+  nav {
+    grid-area: nav;
+  }
+  .icon img {
+    width: 35vw;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu li {
+    margin: 0% 3%;
+    color: #fdf1ff;
+  }
+  .search {
+    grid-area: search;
+    width: 25vw;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .imput {
+    width: 23vw;
+  }
+  .menu ul {
+    display: flex;
+    list-style: none;
+  }
+  .product {
+    grid-area: product;
+    width: 75vw;
+  }
+  .section-1 {
+    grid-area: pagination;
+  }
+  footer {
+    grid-area: footer;
+  }
+  .item {
+    width: 30vw;
+    display: flex;
+  }
+  .movil {
+    display: none;
+  }
+  .product {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .body {
+    display: grid;
+    grid-template-areas:
+      "nav search"
+      "nav product"
+      "nav product"
+      "footer pagination";
+  }
+  nav {
+    width: 15vw;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2%;
+  }
+  .icon img {
+    width: 13vw;
+    margin: 30% 0% 10%;
+  }
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu {
+    margin-left: 5%;
+  }
+  .menu li {
+    margin-top: 5%;
+  }
+  .search {
+    width: 85vw;
+    height: 15vh;
+  }
+  .arrow {
+    padding-top: 1%;
+  }
+
+  .item {
+    width: 17vw;
+    display: flex;
+  }
+  .imput {
+    width: 60vw;
+  }
+
+  .product {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    width: 85vw;
+  }
+  footer {
+    width: 15vw;
+  }
+}
